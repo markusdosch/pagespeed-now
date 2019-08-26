@@ -2,11 +2,10 @@
 const psi = require("psi");
 const ngrok = require("ngrok");
 const ora = require("ora");
-const http = require("http");
 const express = require("express");
 const compression = require("compression");
 
-const spinner = ora("Loading").start();
+let spinner;
 
 function handleOpts(options) {
   options = Object.assign({ strategy: "mobile" }, options);
@@ -40,6 +39,8 @@ const pagespeedNow = async (portOrFolder, options) => {
   if (!portOrFolder) {
     throw new Error("Port or folder required");
   }
+
+  spinner = ora("Loading").start();
 
   const port = await getPort(portOrFolder);
 

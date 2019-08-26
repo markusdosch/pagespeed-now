@@ -12,7 +12,7 @@ const cli = meow(`
     --strategy   Strategy to use when analyzing the page: mobile|desktop (default: mobile)
   Examples
     $ pagespeed-now 3000 --strategy=mobile
-    $ pagespeed-now build
+    $ pagespeed-now _site
     $ pagespeed-now .
 `);
 
