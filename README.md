@@ -25,7 +25,7 @@ $ pagespeed-now --help
     $ pagespeed-now 3000
     $ pagespeed-now _site
     $ pagespeed-now .
-    $ pagespeed-now 3000 --desktop
+    $ pagespeed-now 3000 --strategy=mobile
 ```
 
 ## Usage
@@ -33,7 +33,10 @@ $ pagespeed-now --help
 ### Port
 
 ```sh
-pagespeed-now <port>
+$ pagespeed-now <port>
+
+  Example
+    $ pagespeed-now 3000
 ```
 
 Specify the local port your website is running on. PageSpeed report for `localhost:<port>` will be generated.
@@ -41,10 +44,20 @@ Specify the local port your website is running on. PageSpeed report for `localho
 ### Folder
 
 ```sh
-pagespeed-now <folder>
+$ pagespeed-now <folder>
+
+  Examples
+    $ pagespeed-now _site
+    $ pagespeed-now . # for current directory
 ```
 
 Specify the folder path (relative or absolute to the current folder) to your website's contents. `pagespeed-now` will automatically spawn a local HTTP static-file server (gzip-enabled) on a random free port. PageSpeed report for `localhost:<port>` will be generated.
+
+### Flags
+
+#### --strategy
+
+Strategy to use when analyzing the page: `mobile|desktop` (default: `mobile`)
 
 ## Behind the Scenes
 
