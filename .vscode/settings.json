@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "[js]": {
+      "editor.formatOnSave": true
+    },
+    "[json]": {
+      "editor.formatOnSave": true
+    }
+  }
+  

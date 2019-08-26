@@ -1,0 +1,50 @@
+{
+  "name": "pagespeed-now",
+  "version": "1.0.0",
+  "description": "PageSpeed Insights for local (not-yet-deployed) sites - perfect during development",
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "repository": "github:markusdosch/pagespeed-now",
+  "keywords": [
+    "pagespeed",
+    "insights",
+    "speed",
+    "page",
+    "website",
+    "measure",
+    "optimize",
+    "site",
+    "local",
+    "development"
+  ],
+  "author": {
+    "name": "Markus Dosch",
+    "email": "mail@muellermarkus.com",
+    "url": "https://markusdosch.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markusdosch/pagespeed-now/issues"
+  },
+  "homepage": "https://github.com/markusdosch/pagespeed-now#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "meow": "^5.0.0",
+    "ngrok": "^3.2.5",
+    "ora": "^3.4.0",
+    "psi": "^3.1.0",
+    "update-notifier": "^3.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
