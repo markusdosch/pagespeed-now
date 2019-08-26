@@ -38,6 +38,8 @@
   "homepage": "https://github.com/markusdosch/pagespeed-now#readme",
   "dependencies": {
     "chalk": "^2.4.2",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "meow": "^5.0.0",
     "ngrok": "^3.2.5",
     "ora": "^3.4.0",

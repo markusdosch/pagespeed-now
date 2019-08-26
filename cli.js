@@ -7,17 +7,19 @@ const pagespeedNow = require(".");
 
 const cli = meow(`
   Usage
-    $ pagespeed-now <port>
+    $ pagespeed-now <port|folder>
   Options
     --strategy   Strategy to use when analyzing the page: mobile|desktop (default: mobile)
-  Example
+  Examples
     $ pagespeed-now 3000 --strategy=mobile
+    $ pagespeed-now build
+    $ pagespeed-now .
 `);
 
 updateNotifier({ pkg: cli.pkg }).notify();
 
 if (!cli.input[0]) {
-  console.error("Specify a port");
+  console.error("Specify a port or folder");
   process.exit(1);
 }
 

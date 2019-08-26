@@ -2,26 +2,51 @@
 const psi = require("psi");
 const ngrok = require("ngrok");
 const ora = require("ora");
+const http = require("http");
+const express = require("express");
+const compression = require("compression");
+
+const spinner = ora("Loading").start();
 
 function handleOpts(options) {
   options = Object.assign({ strategy: "mobile" }, options);
   return options;
 }
 
-const pagespeedNow = async (port, options) => {
-  if (!port) {
-    throw new Error("Port required");
+async function getPort(portOrFolder) {
+  if (!isNaN(portOrFolder)) {
+    // Port given
+    const port = portOrFolder;
+    return Number.parseInt(port, 10);
+  } else {
+    // Folder given
+    const folder = portOrFolder;
+
+    spinner.text = `Starting local server for folder "${folder}"`;
+    const app = express();
+    app.use(compression());
+    app.use(express.static(folder));
+
+    // Listen on a random, free port assigned by the OS
+    return new Promise(resolve => {
+      const listener = app.listen(0, () => {
+        resolve(listener.address().port);
+      });
+    });
+  }
+}
+
+const pagespeedNow = async (portOrFolder, options) => {
+  if (!portOrFolder) {
+    throw new Error("Port or folder required");
   }
 
-  const portParsed = Number.parseInt(port);
-  if (!Number.isInteger(portParsed)) {
-    throw new Error("Port must be a number");
-  }
+  const port = await getPort(portOrFolder);
 
-  const spinner = ora("Setting up ngrok tunnel").start();
+  spinner.text = "Setting up ngrok tunnel";
   const url = await ngrok.connect(port);
+
   spinner.text = "Querying PageSpeed Insights";
-  spinner.color = "blue";
   await psi.output(url, handleOpts(options));
 };
 
