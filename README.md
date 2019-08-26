@@ -6,7 +6,7 @@
 
 Thousands of web developers use [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) to analyze the performance of their websites. But: For a PageSpeed check, sites have to be deployed & be publicly accessible.
 
-With `pagespeed-now`, you skip deployment. Get PageSpeed results while your site is still on your local machine.
+With `pagespeed-now`, you skip deployment. **Get PageSpeed results while your site is still on your local machine.**
 
 ## Install
 
@@ -51,7 +51,7 @@ $ pagespeed-now <folder>
     $ pagespeed-now . # for current directory
 ```
 
-Specify the folder path (relative or absolute to the current folder) to your website's contents. `pagespeed-now` will automatically spawn a local HTTP static-file server (gzip-enabled) on a random free port. PageSpeed report for `localhost:<port>` will be generated.
+Specify the folder path (relative or absolute to the current folder) to your website's contents. `pagespeed-now` will automatically spawn a local HTTP static-file server (gzip-enabled) on a random free port. PageSpeed report for this local static-file server will be generated.
 
 ### Flags
 
