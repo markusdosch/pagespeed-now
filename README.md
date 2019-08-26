@@ -4,7 +4,9 @@
 
 ![](screenshot.png)
 
-Thousands of web developers use [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) to analyze the performance of their websites. But: For a PageSpeed check, sites have to be deployed & be publicly accessible. With `pagespeed-now`, you skip deployment. Get PageSpeed results while your site is still on your local machine.
+Thousands of web developers use [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) to analyze the performance of their websites. But: For a PageSpeed check, sites have to be deployed & be publicly accessible.
+
+With `pagespeed-now`, you skip deployment. Get PageSpeed results while your site is still on your local machine.
 
 ## Install
 
