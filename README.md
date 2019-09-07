@@ -61,7 +61,7 @@ Strategy to use when analyzing the page: `mobile|desktop` (default: `mobile`)
 
 ## How it works
 
-This tool generates a temporary public URL for your local webserver with [ngrok](https://ngrok.com) (`<random>.ngrok.io`). Then, it requests a PageSpeed Insights analysis on this public URL. The public URL is discarded when `pagespeed-now` has finished.
+This tool generates a temporary public URL for your local webserver with [ngrok](https://ngrok.com) (`<random>.ngrok.io`). Then, it requests a PageSpeed Insights analysis on this public URL using the awesome [psi](https://github.com/addyosmani/psi) package. The public URL is discarded when `pagespeed-now` has finished.
 
 ## Author
 
