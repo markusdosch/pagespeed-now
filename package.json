@@ -1,6 +1,6 @@
 {
   "name": "pagespeed-now",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "PageSpeed Insights for local (not-yet-deployed) sites - perfect during development",
   "bin": "cli.js",
   "engines": {
