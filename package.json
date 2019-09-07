@@ -1,6 +1,6 @@
 {
   "name": "pagespeed-now",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PageSpeed Insights for local (not-yet-deployed) sites - perfect during development",
   "bin": "cli.js",
   "engines": {
@@ -43,7 +43,7 @@
     "meow": "^5.0.0",
     "ngrok": "^3.2.5",
     "ora": "^3.4.0",
-    "psi": "^3.1.0",
+    "psi": "markusdosch/psi#master",
     "update-notifier": "^3.0.1"
   },
   "devDependencies": {

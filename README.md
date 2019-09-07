@@ -2,7 +2,7 @@
 
 > PageSpeed Insights for local (not-yet-deployed) sites - perfect during development
 
-![](screenshot.png)
+![](screenshot.jpg)
 
 Thousands of web developers use [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) to analyze the performance of their websites. But: For a PageSpeed check, sites have to be deployed & be publicly accessible.
 
